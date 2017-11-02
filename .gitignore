@@ -1,0 +1,6 @@
+/mtk/node_modules
+/dist
+/mtk/src/js/confing.js
+node_modules
+*.zip
+*.project
