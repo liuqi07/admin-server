@@ -6,7 +6,10 @@ let Staff = require('../models/staff');
 let app = express();
 // let db = mongoose.createConnection('localhost', 'test') // 创建一个数据库
 
-mongoose.connect('mongodb://127.0.0.1:27017/admin-server')
+mongoose.connect('mongodb://127.0.0.1:27017/admin-server',{
+  useMongoClient: true,
+  /* other options */
+})
 
 mongoose.connection.on('connected', () => {
     console.log('success')
