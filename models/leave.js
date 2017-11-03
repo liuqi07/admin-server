@@ -1,6 +1,6 @@
-let mongoose = require('mongoose');
+let mongodb = require('./mongodb');
 
 let leaveSchema = new mongoose.Schema({
-    
+
 })
 

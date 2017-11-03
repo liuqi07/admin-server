@@ -1,5 +1,7 @@
-let mongoose = require('mongoose');
-let Schema = mongoose.Schema;
+// let mongoose = require('mongoose');
+let mongodb = require('./mongodb');
+let Schema = mongodb.mongoose.Schema;
+
 
 let StaffSchema = new Schema({
     id: Number,
@@ -7,8 +9,10 @@ let StaffSchema = new Schema({
     staffId: String,
     userName: String,
     pwd: String,
-    phone: String
+    phone: String,
+    show: Number,
+    email: String
 });
 
-module.exports = mongoose.model('Staff', StaffSchema);
+module.exports = mongodb.mongoose.model('Staff', StaffSchema);
 
