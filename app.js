@@ -7,8 +7,9 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-let staff = require('./routes/staff')
-let leave = require('./routes/leave')
+let staff = require('./routes/staff');
+let leave = require('./routes/leave');
+let application = require('./routes/application')
 
 var app = express();
 
@@ -37,7 +38,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/staff', staff);
-
+app.use('/leave', leave);
+app.use('/application', application);
 
 // app.get('/get', (req, res) => {
 //   res.send('get success')
