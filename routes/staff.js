@@ -39,30 +39,64 @@ router.post('/add', (req, res, next) => {
     let addData = req.body;
     let postData = Object.assign({userName}, {$set: addData});
 
-    // 判断用户是否存在
-    Staff.find({userName}, (err, doc) => {
-        console.log(doc);
+    let tempId = null;
+    Staff.find({}, (err, doc2)=> {
         if(err) {
             console.log(err);
         }else {
-            if(doc.length===0){
-                // 添加用户数据库中没有，执行添加
-                let staffModel = new Staff(addData);
-                staffModel.save((err) => {
-                    if(err) {
-                        console.log(err)
-                    }else {
-                        console.log('insert success')
+            // 自加id
+            addData.id = doc2.length;
+            // 判断用户是否存在
+            Staff.find({userName}, (err, doc) => {
+                console.log(doc);
+                if(err) {
+                    console.log(err);
+                }else {
+                    if(doc.length===0){
+                        // 添加用户数据库中没有，执行添加
+                        let staffModel = new Staff(addData);
+                        staffModel.save((err) => {
+                            if(err) {
+                                console.log(err)
+                            }else {
+                                console.log('insert success')
+                            }
+                        })
+                    }else{
+                        res.json({
+                            status: 0,
+                            msg: '用户名重复'
+                        })
                     }
-                })
-            }else{
-                res.json({
-                    status: 0,
-                    msg: '用户名重复'
-                })
-            }
+                }
+            })
         }
     })
+
+    // 判断用户是否存在
+    // Staff.find({userName}, (err, doc) => {
+    //     console.log(doc);
+    //     if(err) {
+    //         console.log(err);
+    //     }else {
+    //         if(doc.length===0){
+    //             // 添加用户数据库中没有，执行添加
+    //             let staffModel = new Staff(addData);
+    //             staffModel.save((err) => {
+    //                 if(err) {
+    //                     console.log(err)
+    //                 }else {
+    //                     console.log('insert success')
+    //                 }
+    //             })
+    //         }else{
+    //             res.json({
+    //                 status: 0,
+    //                 msg: '用户名重复'
+    //             })
+    //         }
+    //     }
+    // })
 })
 
 // 修改
