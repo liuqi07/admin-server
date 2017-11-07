@@ -12,7 +12,6 @@ router.get('/query', (req, res, next) => {
     if(!name) delete req.query.name;
     // 查询show不为0的数据
     let query = Object.assign(req.query, {show: {$ne: 0}});
-    console.log(query)
     Staff.find(query, (err, doc) => {
         if(err){
             res.json({
@@ -38,7 +37,6 @@ router.post('/add', (req, res, next) => {
     let {userName} = req.body;
     let addData = req.body;
     // let postData = Object.assign({userName}, {$set: addData});
-    console.log(req.body)
     // let tempId = null;
     Staff.find({}, (err2, doc2)=> {
         if(err2) {
@@ -58,7 +56,6 @@ router.post('/add', (req, res, next) => {
                     if(doc.length===0){
                         // 自加id
                         addData.id = doc2.length;
-                        console.log(addData)
                         // 添加用户数据库中没有，执行添加
                         // let staffModel = new Staff(addData);
                         Staff.create(addData, (err) => {
@@ -117,7 +114,7 @@ router.post('/update', (req, res, next) => {
     let {id} = req.body;
     let query = Object.assign({id}, {$set: req.body});
 
-    Staff.update(query, (err, doc) => {
+    Staff.updateOne({id}, req,body, (err, doc) => {
         if(err){
             res.json({
                 status: 0,

@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f93bc8a1-3836-4d4e-83a9-269b45aad2a6" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/group.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/role.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/staff.js" afterPath="$PROJECT_DIR$/models/staff.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/application.js" afterPath="$PROJECT_DIR$/routes/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/staff.js" afterPath="$PROJECT_DIR$/routes/staff.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,8 +30,8 @@
       <file leaf-file-name="staff.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/staff.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="67" column="52" lean-forward="true" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+            <state relative-caret-position="353">
+              <caret line="116" column="51" lean-forward="true" selection-start-line="116" selection-start-column="51" selection-end-line="116" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -47,8 +40,8 @@
       <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="296" column="18" lean-forward="false" selection-start-line="296" selection-start-column="8" selection-end-line="296" selection-end-column="18" />
+            <state relative-caret-position="231">
+              <caret line="212" column="25" lean-forward="false" selection-start-line="212" selection-start-column="16" selection-end-line="212" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -87,8 +80,8 @@
         <option value="$PROJECT_DIR$/routes/group.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/models/group.js" />
-        <option value="$PROJECT_DIR$/routes/staff.js" />
         <option value="$PROJECT_DIR$/models/staff.js" />
+        <option value="$PROJECT_DIR$/routes/staff.js" />
       </list>
     </option>
   </component>
@@ -320,16 +313,15 @@
       <workItem from="1509521640444" duration="64000" />
       <workItem from="1509521725756" duration="33119000" />
       <workItem from="1509714831003" duration="2212000" />
-      <workItem from="1510023527819" duration="11184000" />
+      <workItem from="1510023527819" duration="12250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60675000" />
+    <option name="totallyTimeSpent" value="61741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12183353" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -362,7 +354,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/staff.js</url>
-          <line>37</line>
+          <line>36</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
@@ -655,14 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="296" column="18" lean-forward="false" selection-start-line="296" selection-start-column="8" selection-end-line="296" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/staff.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -671,10 +655,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="212" column="25" lean-forward="false" selection-start-line="212" selection-start-column="16" selection-end-line="212" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/staff.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="67" column="52" lean-forward="true" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+        <state relative-caret-position="353">
+          <caret line="116" column="51" lean-forward="true" selection-start-line="116" selection-start-column="51" selection-end-line="116" selection-end-column="51" />
           <folding />
         </state>
       </provider>
