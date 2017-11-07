@@ -41,6 +41,7 @@ router.post('/addApplication', (req, res, next) => {
 // 查询请假记录
 router.get('/queryRecord', (req, res, next) => {
     // type 申请类型 1 请假 2 加班
+    console.log(req.query)
     let {id, type, pageSize} = req.query;
     let projection = {
         applicationDate: 1,
@@ -114,7 +115,15 @@ router.post('/delApplication', (req, res, next) => {
 
 // 查询名下待审批数据
 router.post('/queryNotApprove', (req, res, next) => {
-    let notApproveData = {immediateLeaderId: req.body.id, leaveProgress: (req.body.role - 1), type: 1};
+    let {role} = req.body;
+    let notApproveData = {} ;
+    // 如果是总监角色登录，查询所有待总监审批leaveProgress=2的数据
+    console.log(req.body)
+    if(role==3){
+        notApproveData = {leaveProgress: 2, type: 1};
+    }else{
+        notApproveData = {immediateLeaderId: req.body.id, leaveProgress: (req.body.role - 1), type: 1};
+    }
     let projection = {
         id: 1,
         role: 1,

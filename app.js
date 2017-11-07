@@ -9,7 +9,9 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 let staff = require('./routes/staff');
 let leave = require('./routes/leave');
-let application = require('./routes/application')
+let application = require('./routes/application');
+let role = require('./routes/role');
+let group = require('./routes/group');
 
 var app = express();
 
@@ -37,9 +39,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/staff', staff);
-app.use('/leave', leave);
-app.use('/application', application);
+app.use('/api/staff', staff);
+app.use('/api/leave', leave);
+app.use('/api/application', application);
+app.use('/api/role', role);
+app.use('/api/group', group);
 
 // app.get('/get', (req, res) => {
 //   res.send('get success')

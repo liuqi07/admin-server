@@ -37,29 +37,41 @@ router.post('/add', (req, res, next) => {
     // console.log(req.body);
     let {userName} = req.body;
     let addData = req.body;
-    let postData = Object.assign({userName}, {$set: addData});
-
-    let tempId = null;
-    Staff.find({}, (err, doc2)=> {
-        if(err) {
-            console.log(err);
+    // let postData = Object.assign({userName}, {$set: addData});
+    console.log(req.body)
+    // let tempId = null;
+    Staff.find({}, (err2, doc2)=> {
+        if(err2) {
+            res.json({
+                status: 0,
+                msg: err2.message
+            })
         }else {
-            // 自加id
-            addData.id = doc2.length;
             // 判断用户是否存在
             Staff.find({userName}, (err, doc) => {
-                console.log(doc);
                 if(err) {
-                    console.log(err);
+                    res.json({
+                        status: 0,
+                        msg: err.message
+                    })
                 }else {
                     if(doc.length===0){
+                        // 自加id
+                        addData.id = doc2.length;
+                        console.log(addData)
                         // 添加用户数据库中没有，执行添加
-                        let staffModel = new Staff(addData);
-                        staffModel.save((err) => {
+                        // let staffModel = new Staff(addData);
+                        Staff.create(addData, (err) => {
                             if(err) {
-                                console.log(err)
+                                res.json({
+                                    status: 0,
+                                    msg: err.message
+                                })
                             }else {
-                                console.log('insert success')
+                                res.json({
+                                    status: 1,
+                                    msg: '添加成功'
+                                })
                             }
                         })
                     }else{

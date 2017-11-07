@@ -12,8 +12,9 @@ let StaffSchema = new Schema({
     show: Number,
     email: String,
     immediateLeader: String,
-    immdeiateLeaderId: Number,
-    role: Number
+    immediateLeaderId: Number,
+    role: Number,
+    department: String
 });
 
 module.exports = mongodb.mongoose.model('Staff', StaffSchema);
