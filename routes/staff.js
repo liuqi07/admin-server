@@ -55,7 +55,7 @@ router.post('/add', (req, res, next) => {
                 }else {
                     if(doc.length===0){
                         // 自加id
-                        addData.id = doc2.length;
+                        addData.id = doc2.length+1;
                         // 添加用户数据库中没有，执行添加
                         // let staffModel = new Staff(addData);
                         Staff.create(addData, (err) => {
@@ -110,11 +110,10 @@ router.post('/add', (req, res, next) => {
 
 // 修改
 router.post('/update', (req, res, next) => {
-    // console.log(req.body);
+    console.log(req.body);
     let {id} = req.body;
-    let query = Object.assign({id}, {$set: req.body});
-
-    Staff.updateOne({id}, req,body, (err, doc) => {
+    // let query = Object.assign({id}, {$set: req.body});
+    Staff.update({id}, req.body, (err, doc) => {
         if(err){
             res.json({
                 status: 0,
@@ -147,6 +146,32 @@ router.post('/del', (req, res, next) => {
                 status: 1,
                 msg: '删除成功'
             })
+        }
+    })
+})
+
+// ---------------------- 登录 -----------------------
+router.post('/login', (req, res, next) => {
+    console.log(req.body)
+    Staff.findOne(req.body, (err,doc) => {
+        console.log(doc)
+        if(err){
+            res.json({
+                status: 0,
+                msg: err.message
+            })
+        }else{
+            if(doc){
+                res.json({
+                    status: 1,
+                    msg: '登录成功'
+                })
+            }else{
+                res.json({
+                    status: 2,
+                    msg: '请检查账号密码'
+                })
+            }
         }
     })
 })
