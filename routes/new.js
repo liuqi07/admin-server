@@ -11,8 +11,10 @@ let New = require('../models/new');
 router.get('/query', (req, res, next) => {
     let {size, page, type} = req.query;
     console.log(req.query)
-    type = type==='newest'?null:type;
-    New.find({})
+    let query = {type};
+    type==='newest'?(delete query.type):type;
+    console.log(query)
+    New.find(query)
         .skip((page-1)*10)
         .sort({createTime: -1})
         .limit(parseFloat(size))
