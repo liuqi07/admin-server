@@ -12,6 +12,7 @@ let leave = require('./routes/leave');
 let application = require('./routes/application');
 let role = require('./routes/role');
 let group = require('./routes/group');
+let news = require('./routes/new');
 
 var app = express();
 
@@ -44,6 +45,7 @@ app.use('/api/leave', leave);
 app.use('/api/application', application);
 app.use('/api/role', role);
 app.use('/api/group', group);
+app.use('/api/new', news);
 
 // app.get('/get', (req, res) => {
 //   res.send('get success')
