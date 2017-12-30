@@ -13,6 +13,7 @@ router.get('/query', (req, res, next) => {
     // 查询show不为0的数据
     let query = Object.assign(req.query, {show: {$ne: 0}});
     Staff.find(query, (err, doc) => {
+        console.log(doc)
         if(err){
             res.json({
                 status: 0,
@@ -21,7 +22,7 @@ router.get('/query', (req, res, next) => {
         }else {
             res.json({
                 status: 1,
-                msg: '请求成功',
+                msg: '查询成功',
                 result: {
                     count: doc.length,
                     list: doc

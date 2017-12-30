@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f93bc8a1-3836-4d4e-83a9-269b45aad2a6" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/new.js" afterPath="$PROJECT_DIR$/routes/new.js" />
-    </list>
+    <list default="true" id="f93bc8a1-3836-4d4e-83a9-269b45aad2a6" name="默认的" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -59,7 +57,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="new.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/new.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
@@ -67,6 +65,16 @@
               <folding>
                 <element signature="e#0#50#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lib.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/lib.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,6 +142,7 @@
         <option value="$PROJECT_DIR$/models/new.js" />
         <option value="$PROJECT_DIR$/models/mongodb.js" />
         <option value="$PROJECT_DIR$/routes/new.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/lib.js" />
       </list>
     </option>
   </component>
@@ -196,6 +205,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -369,12 +392,12 @@
       <workItem from="1510132095857" duration="6797000" />
       <workItem from="1510198291813" duration="599000" />
       <workItem from="1510214894819" duration="12000" />
-      <workItem from="1510821181668" duration="3365000" />
+      <workItem from="1510821181668" duration="4932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73708000" />
+    <option name="totallyTimeSpent" value="75275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -413,7 +436,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/mongodb.js" />
     <entry file="file://$PROJECT_DIR$/models/staff.js" />
     <entry file="file://$PROJECT_DIR$/routes/staff.js" />
     <entry file="file://$PROJECT_DIR$/models/leave.js" />
@@ -527,6 +549,14 @@
           <folding>
             <element signature="e#0#50#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/lib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

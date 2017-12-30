@@ -1,8 +1,8 @@
 let mongoose = require('mongoose');
 
 // let db = mongoose.createConnection('localhost', 'test') // 创建一个数据库
-let url = 'mongodb://59.110.165.79:27017/admin-server';
-// let url = 'mongodb://127.0.0.1:27017/admin-server';
+// let url = 'mongodb://59.110.165.79:27017/admin-server';
+let url = 'mongodb://127.0.0.1:27017/admin-server';
 
 mongoose.connect(url, {
     useMongoClient: true
