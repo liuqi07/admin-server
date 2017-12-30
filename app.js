@@ -12,17 +12,18 @@ let leave = require('./routes/leave');
 let application = require('./routes/application');
 let role = require('./routes/role');
 let group = require('./routes/group');
+let news = require('./routes/new');
 
 var app = express();
 
 
 app.all('*', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
-    res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
-    res.header("X-Powered-By",' 3.2.1')
-    if(req.method=="OPTIONS") res.send(200);/*让options请求快速返回*/
-    else  next();
+    // res.header("Access-Control-Allow-Origin", "*");
+    // res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
+    // res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+    // res.header("X-Powered-By",' 3.2.1')
+    // if(req.method=="OPTIONS") res.send(200);/*让options请求快速返回*/
+    // else  next();
 });
 
 // view engine setup
@@ -44,6 +45,7 @@ app.use('/api/leave', leave);
 app.use('/api/application', application);
 app.use('/api/role', role);
 app.use('/api/group', group);
+app.use('/api/new', news);
 
 // app.get('/get', (req, res) => {
 //   res.send('get success')
