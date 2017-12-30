@@ -4,3 +4,6 @@
 node_modules
 *.zip
 *.project
+npm-debug.log
+/public
+/.idea
